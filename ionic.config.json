@@ -1,0 +1,7 @@
+{
+  "name": "watchthis",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
