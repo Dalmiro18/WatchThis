@@ -1,17 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-slides mode="ios"
+                [options]="slideOpts">
+        <ion-slide *ngFor="let movie of newestMovies">
+            <ion-card>
+                <img [src]="movie.poster_path | image">
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>

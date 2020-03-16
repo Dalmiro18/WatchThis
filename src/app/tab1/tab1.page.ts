@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../services/movies.service';
-import { answerMDb, Movie } from '../interfaces/interface';
+import { Movie } from '../interfaces/interface';
 
 @Component({
   selector: 'app-tab1',
@@ -8,14 +8,19 @@ import { answerMDb, Movie } from '../interfaces/interface';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit {
+
 newestMovies: Movie[] = [];
+slideOpts = {
+  slidesPerView: 1.9,
+  freeMode: true
+};
 
   constructor(private movieService: MoviesService) {}
 
 
   ngOnInit(){
     this.movieService.getFeature()
-    .subscribe((answ) =>{
+    .subscribe(answ =>{
       this.newestMovies = answ.results;
       console.log(answ);
     });
