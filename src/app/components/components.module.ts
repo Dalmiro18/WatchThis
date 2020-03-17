@@ -7,7 +7,7 @@ import { PipesModule } from '../pipes/pipes.module';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [    SlideshowBackdropComponent],
   imports: [
     CommonModule,
     IonicModule,
