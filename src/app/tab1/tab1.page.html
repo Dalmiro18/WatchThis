@@ -1,12 +1,8 @@
 <ion-content>
-
-    <ion-slides mode="ios"
-                [options]="slideOpts">
-        <ion-slide *ngFor="let movie of newestMovies">
-            <ion-card>
-                <img [src]="movie.poster_path | image">
-            </ion-card>
-        </ion-slide>
-    </ion-slides>
-
+    <ion-grid>
+        <ion-row>
+            <ion-col>PELICULAS NUEVAS</ion-col>
+        </ion-row>
+    </ion-grid>
+    <!-- <app-slideshow-backdrop></app-slideshow-backdrop> -->
 </ion-content>
